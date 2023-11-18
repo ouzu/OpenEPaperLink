@@ -174,8 +174,8 @@ void WifiManager::startManagementServer() {
         logLine("Starting configuration AP, ssid OpenEPaperLink");
         WiFi.disconnect(false, true);
         WiFi.mode(WIFI_AP);
-        WiFi.softAP("OpenEPaperLink", "", 1, false);
-        WiFi.softAPsetHostname("OpenEPaperLink");
+        WiFi.softAP("NanoAP_ouzu", "", 1, false);
+        WiFi.softAPsetHostname("NanoAP_ouzu");
         IPAddress IP = WiFi.softAPIP();
         terminalLog("Connect to it, visit http://" + String(IP.toString().c_str()) + "/setup");
         _APstarted = true;
